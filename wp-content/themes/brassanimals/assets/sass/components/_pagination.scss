@@ -1,0 +1,24 @@
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  margin: 13px 0 63px;
+  margin-top: 20px;
+  &__inner {
+    a {
+      display: inline-block;
+      color: $secondary-dark;
+      background-color: transparent;
+      border: none;
+      box-shadow: none;
+      text-decoration: none;
+      font-weight: 500;
+      &:hover {
+        background-color: transparent;
+        color: $secondary;
+      }
+      &:focus {
+        box-shadow: none;
+      }
+    }
+  }
+}

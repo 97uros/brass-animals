@@ -1,0 +1,32 @@
+.nothing-found {
+  text-align: center;
+  padding: 80px 0 107px;
+  h2 {
+    margin: 35px 0 18px;
+  }
+  p {
+    font-size: $text-24;
+    line-height: 1.2;
+    margin: 0 auto;
+  }
+  &--404 {
+    padding-bottom: 70px;
+    p {
+      max-width: 770px;
+    }
+    .page-template-thank-you-page-php & {
+      p {
+        max-width: 611px;
+      }
+    }
+  }
+  &__button {
+    margin-top: 65px;
+  }
+  &--vendors {
+    padding-top: 130px;
+    @include media-breakpoint-down(md) {
+      padding: 50px 0;
+    }
+  }
+}

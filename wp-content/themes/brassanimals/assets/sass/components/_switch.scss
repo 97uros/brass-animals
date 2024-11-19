@@ -1,0 +1,68 @@
+.switch {
+  position: relative;
+  margin-left: 5px;
+  display: inline-block;
+  width: 43px;
+  height: 20px;
+  @include media-breakpoint-down(md) {
+    width: 32px;
+    height: 16px;
+  }
+  input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+}
+
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: $gray;
+  -webkit-transition: 0.4s;
+  transition: 0.4s;
+  &:before {
+    position: absolute;
+    content: "";
+    height: 18px;
+    width: 18px;
+    left: 1px;
+    bottom: 1px;
+    background-color: $white;
+    -webkit-transition: 0.4s;
+    transition: 0.4s;
+    @include media-breakpoint-down(md) {
+      height: 14px;
+      width: 14px;
+    }
+  }
+  &.round {
+    border-radius: 34px;
+    &:before {
+      border-radius: 50%;
+    }
+  }
+}
+
+input:checked + .slider {
+  background-color: $secondary;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px $secondary;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(23px);
+  -ms-transform: translateX(23px);
+  transform: translateX(23px);
+  @include media-breakpoint-down(md) {
+    -webkit-transform: translateX(16px);
+    -ms-transform: translateX(16px);
+    transform: translateX(16px);
+  }
+}

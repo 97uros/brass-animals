@@ -1,0 +1,120 @@
+.testimonials {
+  padding: 10px 0 40px;
+  h5 {
+    color: $primary;
+    font-size: $text-16;
+    font-weight: 500;
+    text-align: center;
+    margin-bottom: 3px;
+  }
+  p {
+    margin-top: 20px;
+  }
+  &__date {
+    font-size: $text-12;
+    color: $tertiary;
+    display: block;
+    text-align: center;
+  }
+  &__award {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    img {
+      margin: 0 7px;
+    }
+  }
+  .owl-item {
+    display: flex;
+    opacity: 0.3;
+    @include media-breakpoint-up(lg) {
+      padding: 0 12px;
+    }
+    &__wrapper {
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.07);
+      border-radius: 8px;
+      padding: 10px 20px;
+      font-size: $text-14;
+      line-height: 1.50;
+      height: 100%;
+      overflow: hidden;
+      .morecontent span {
+        display: none;
+      }
+      .morelink {
+          display: inline-block;
+          text-decoration: none;
+          color: $secondary-dark;
+          &:hover {
+            text-decoration: underline;
+          }
+      }
+    }
+    &.center {
+      opacity: 1;
+      .owl-item__wrapper {
+        box-shadow: 0px 9px 60px rgba(0, 0, 0, 0.1);
+        background-color: $white;
+        @include media-breakpoint-down(md) {
+          box-shadow: 0px 9px 30px rgba(0, 0, 0, 0.1);
+        }
+      }
+      .owl-item__inner {
+        display: flex;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.07);
+        @include media-breakpoint-down(md) {
+          margin: 0 35px;
+        }
+      }
+    }
+  }
+  .owl-stage {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 60px 0 80px;
+    @include media-breakpoint-down(md) {
+      padding: 30px 0 50px;
+    }
+  }
+  .owl-carousel {
+    position: relative;
+    max-width: 970px;
+    margin: 0 auto;
+    .owl-nav {
+      &.disabled {
+        display: block;
+      }
+      i {
+        font-size: 30px;
+      }
+      button {
+        position: absolute;
+        top: 50%;
+        margin-top: -8px;
+        &:hover {
+          background-color: transparent;
+          color: $tertiary;
+        }
+      }
+      .owl-prev {
+        left: -30px;
+        @include media-breakpoint-down(xl) {
+          left: -32px;
+        }
+        @include media-breakpoint-down(sm) {
+          left: -2px;
+        }
+      }
+      .owl-next {
+        right: -30px;
+        @include media-breakpoint-down(xl) {
+          right: -32px;
+        }
+        @include media-breakpoint-down(sm) {
+          right: -2px;
+        }
+      }
+    }
+  }
+}

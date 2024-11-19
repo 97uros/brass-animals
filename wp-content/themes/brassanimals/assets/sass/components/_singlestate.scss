@@ -1,0 +1,186 @@
+.singlestate {
+  &__link {
+    margin-top: 70px;
+    margin-bottom: 13px;
+    @include media-breakpoint-down(md) {
+      margin-top: 10px;
+    }
+    a {
+      color: $secondary-dark;
+      text-decoration: none;
+    }
+  }
+  h2 {
+    margin-bottom: 30px;
+    @include media-breakpoint-down(md) {
+      margin-bottom: 10px;
+    }
+  }
+  &__content {
+    line-height: $line-height-base * 1.37;
+    margin-bottom: 70px;
+  }
+  &__dropdown {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    select {
+      height: 50px;
+      width: 100%;
+      max-width: 440px;
+      margin-bottom: 80px;
+      position: relative;
+      &:focus {
+        border: none;
+        box-shadow: none;
+      }
+      option {
+        height: 50px;
+        width: 100%;
+        max-width: 440px;
+        border-radius: 8px;
+        padding-left: 20px;
+        background-color: $gray-base;
+        border: none;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.07);
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+    .buttondiv {
+      height: 50px;
+      width: 50px;
+      margin-top: 0 !important;
+      .buttonFind {
+        height: 50px;
+        width: 50px;
+        border-radius: 8px;
+        background-color: $secondary;
+        border: none;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.07);
+        margin-bottom: 80px;
+      }
+    }
+  }
+  &__wrappermap {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-bottom: 70px;
+    @include media-breakpoint-down(md) {
+      margin: 80px 0 40px;
+    }
+    .map {
+      background-color: $primary;
+      border-radius: 50%;
+      width: 100%;
+      max-width: 755px;
+      padding: 17%;
+    }
+    .minimap {
+      width: 100%;
+      max-width: 163px;
+      .map_wrapper {
+        border-radius: 50%;
+        padding: 0px;
+        background-color: $primary;
+      }
+      img {
+        width: 100%;
+      }
+    }
+  }
+  &__back-wrap {
+    position: absolute;
+    top: -15px;
+    right: -12%;
+    width: 163px;
+    height: 163px;
+    @include media-breakpoint-down(xl) {
+      width: 120px;
+    }
+    @include media-breakpoint-down(lg) {
+      width: 100px;
+    }
+    @include media-breakpoint-down(md) {
+      width: 77px;
+      top: -85px;
+      right: auto;
+      left: 0;
+    }
+  }
+  &__back {
+    position: relative;
+    display: inline;
+    &:hover {
+      .singlestate__tooltip {
+        visibility: visible;
+        bottom: 5px;
+        left: 80px;
+        z-index: 5;
+        @include media-breakpoint-down(xl) {
+          left: 50px;
+        }
+        @include media-breakpoint-down(lg) {
+          left: 45px;
+        }
+        @include media-breakpoint-down(md) {
+          left: 35px;
+          bottom: 3px;
+        }
+      }
+    }
+    .singlestate__tooltip {
+      position: absolute;
+      width: 104px;
+      color: $primary;
+      background: $gray-lighter;
+      border: 1px solid $gray;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.07);
+      height: 26px;
+      line-height: 24px;
+      text-align: center;
+      visibility: hidden;
+      border-radius: 2px;
+      font-size: $text-12;
+      z-index: 5;
+      @include media-breakpoint-down(md) {
+        visibility: visible;
+        bottom: 3px;
+        left: 35px;
+        font-size: $text-10;
+        width: 80px;
+        height: 21px;
+        line-height: 19px;
+      }
+      &:after,
+      &:before {
+        top: 100%;
+        left: 15%;
+        border: solid transparent;
+        content: "";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+      }
+      &:after {
+        border-color: rgba(251, 251, 251, 0);
+        border-top-color: $gray-lighter;
+        border-width: 7px;
+        margin-left: -7px;
+      }
+      &:before {
+        border-color: rgba(189, 189, 189, 0);
+        border-top-color: $gray;
+        border-width: 8px;
+        margin-left: -8px;
+      }
+    }
+  }
+}
+.optionscol {
+  display: flex;
+  justify-content: center;
+}

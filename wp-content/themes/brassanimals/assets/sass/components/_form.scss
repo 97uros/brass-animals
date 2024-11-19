@@ -1,0 +1,68 @@
+.form {
+  padding: 65px 0 45px;
+  background-color: $gray-base;
+  @include media-breakpoint-down(lg) {
+    padding: 34px 0 16px;
+  }
+}
+
+.wpcf7-form {
+  p {
+    margin-bottom: 23px;
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    .required {
+      color: $secondary-dark;
+    }
+  }
+  input,
+  textarea {
+    background: $gray-lighter;
+    border: 1px solid $tertiary;
+    border-radius: 8px;
+    padding: 13px 15px;
+    width: 100%;
+    &.btn {
+      border-color: $secondary;
+      width: auto;
+      order: 2;
+      background-color: transparent;
+      &:hover {
+        background-color: $secondary;
+      }
+    }
+    .wpcf7-spinner {
+      order: 1;
+    }
+    &::-webkit-input-placeholder {
+      color: $tertiary;
+    }
+    &::-moz-placeholder {
+      color: $tertiary;
+    }
+    &:-ms-input-placeholder {
+      color: $tertiary;
+    }
+    &:-moz-placeholder {
+      color: $tertiary;
+    }
+    &:focus {
+      outline: none;
+    }
+  }
+  textarea {
+    min-height: 252px;
+  }
+  .wpcf7-not-valid-tip {
+    font-size: $text-12;
+    margin-top: 3px;
+  }
+  .wpcf7 & {
+    .wpcf7-response-output {
+      margin: 10px 0 25px;
+      padding: 15px;
+    }
+  }
+}

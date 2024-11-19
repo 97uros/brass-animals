@@ -1,0 +1,80 @@
+.multi-select-container {
+  display: block;
+  position: relative;
+}
+
+.multi-select-menu {
+  position: absolute;
+  left: 0;
+  top: 100%;
+  float: left;
+  min-width: 100%;
+  background: $gray-lighter;
+  padding: 15px 15px 10px;
+  border-radius: 8px;
+  display: none;
+  z-index: 1;
+  .multi-select-container--open & {
+    display: block;
+  }
+}
+
+.multi-select-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: $gray-lighter;
+  border: 1px solid $tertiary;
+  border-radius: 8px;
+  padding: 13px 40px 13px 15px;
+  width: 100%;
+  cursor: default;
+  .multi-select-container--open & {
+    border-color: $secondary;
+  }
+  &:after {
+    content: "\f107";
+    font-weight: 300;
+    font-family: "Font Awesome 5 Pro";
+    display: inline-block;
+    font-size: $text-24;
+    color: $tertiary;
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    .multi-select-container--open & {
+      color: $secondary;
+    }
+  }
+}
+
+.multi-select-menuitem {
+  display: flex !important;
+  align-items: center;
+  justify-content: start;
+  input {
+    -webkit-appearance: none;
+    background-color: $white;
+    border: 1px solid $gray;
+    padding: 11px;
+    border-radius: 4px;
+    display: inline-block;
+    position: relative;
+    margin-right: 20px;
+    width: auto;
+    &:checked {
+      background-color: $secondary;
+      border: 1px solid $secondary;
+      color: $primary;
+      &:after {
+        content: "\f00c";
+        font-weight: 400;
+        font-family: "Font Awesome 5 Pro";
+        position: absolute;
+        top: 1px;
+        left: 4px;
+        color: $primary;
+      }
+    }
+  }
+}

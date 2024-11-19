@@ -1,0 +1,40 @@
+# OS generated files #
+######################
+.DS_Store
+.DS_Store?
+/**/.DS_Store
+
+# WordPress files #
+###################
+**/wp-config.php
+**/wp-admin
+**/wp-includes
+**/*.log
+**/.htaccess
+**/sitemap.xml
+**/sitemap.xml.gz
+**/wp-content/themes/autonomija/node_modules
+**/wp-content/themes/autonomija/acf-json
+**/wp-content/uploads/
+/index.php
+license.txt
+readme.html
+wp-activate.php
+wp-blog-header.php
+wp-comments-post.php
+wp-cron.php
+wp-links-opml.php
+wp-load.php
+wp-login.php
+wp-mail.php
+wp-settings.php
+wp-signup.php
+wp-trackback.php
+xmlrpc.php
+
+
+# SASS files #
+###################
+**/*.css.map
+**/.sass-cache
+**/css/vendor

@@ -1,0 +1,80 @@
+.singlecity {
+  &__hero {
+    width: 100%;
+  }
+  &__dropdown {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 70px;
+    select {
+      position: absolute;
+      background-color: $gray-lighter;
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.07);
+      border-radius: 8px;
+      border: none;
+      max-height: 10rem;
+      overflow-y: auto;
+      padding-top: 5px;
+      height: 50px;
+      width: 100%;
+      max-width: 440px;
+      &:focus {
+        border: none;
+        box-shadow: none;
+      }
+      option {
+        height: 50px;
+        width: 100%;
+        max-width: 440px;
+        border-radius: 8px;
+        padding-left: 20px;
+        background-color: $gray-base;
+        border: none;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.07);
+        &:first-child {
+          display: none;
+        }
+      }
+    }
+    .buttondiv {
+      height: 50px;
+      width: 50px;
+      .buttonFind {
+        height: 50px;
+        width: 50px;
+        border-radius: 8px;
+        background-color: $secondary;
+        border: none;
+        box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.07);
+      }
+    }
+  }
+  &__text {
+    margin: 70px 0;
+    line-height: $line-height-base * 1.37;
+  }
+  &__videos {
+    .video {
+      background-color: linear-gradient(
+        268.41deg,
+        rgba(186, 181, 172, 0) -20.47%,
+        #bab5ac 127.77%
+      );
+    }
+    .latestposts {
+      background-color: linear-gradient(
+        268.41deg,
+        rgba(186, 181, 172, 0) -20.47%,
+        #bab5ac 127.77%
+      );
+    }
+  }
+}
+.searchcol {
+  display: flex;
+  justify-content: center;
+}
+input::-webkit-calendar-picker-indicator {
+  display: none !important;
+}

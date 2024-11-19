@@ -1,0 +1,6 @@
+#wrapper {
+  padding-top: 76px;
+  @include media-breakpoint-down(lg) {
+    padding-top: 40px;
+  }
+}

@@ -1,0 +1,11 @@
+// Custom variables
+// ----------------
+@import "vendor/bootstrap/bootstrap";
+
+@import "custom-variables";
+// Import your files
+// -----------------
+@import "utils/global";
+@import "base/global";
+@import "layouts/global";
+@import "components/global";

@@ -1,0 +1,85 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+blockquote {
+  @extend %font-fix;
+}
+
+h1 {
+  font-size: $text-48;
+  font-weight: 900;
+  line-height: 1.2;
+  text-align: center;
+  color: $white;
+  margin-bottom: 20px;
+  @include media-breakpoint-down(lg) {
+    font-size: $text-30;
+    margin-bottom: 16px;
+  }
+}
+
+h2 {
+  font-size: $text-44;
+  font-weight: 700;
+  line-height: 1.273;
+  @include media-breakpoint-down(lg) {
+    font-size: $text-24;
+  }
+}
+
+h3 {
+  font-size: $text-36;
+  font-weight: 700;
+  line-height: 1.195;
+}
+
+h4 {
+  font-size: $text-30;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+h5 {
+  font-size: $text-24;
+  font-weight: 500;
+  line-height: 1.2;
+  color: $white;
+  //single location page
+}
+
+h6 {
+  font-size: $text-12;
+  text-transform: uppercase;
+  color: $secondary;
+  font-weight: 400;
+  margin-bottom: 7px;
+  @include media-breakpoint-down(lg) {
+    margin-bottom: 10px;
+  }
+}
+
+p:empty {
+  display: none !important;
+}
+
+a {
+  @include transition(all 0.2s);
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+hr {
+  margin: 0;
+  opacity: 1;
+  background: radial-gradient(
+    circle,
+    rgba(235, 207, 144, 1) 0%,
+    rgba(235, 207, 144, 0) 100%
+  );
+}

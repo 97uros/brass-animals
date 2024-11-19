@@ -1,0 +1,9 @@
+.mb-50 {
+  margin-bottom: 50px;
+}
+
+.d-none-small {
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
+}

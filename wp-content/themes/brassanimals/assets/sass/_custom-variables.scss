@@ -1,0 +1,33 @@
+// Custom Variables
+// ----------------
+// Fonts
+$font-family: "Lato", "Open Sans", "Arial", sans-serif;
+
+// Font sizes
+$text-16: 1rem;
+$text-48: $text-16 * 3;
+$text-44: $text-16 * 2.75;
+$text-36: $text-16 * 2.25;
+$text-30: $text-16 * 1.875;
+$text-24: $text-16 * 1.5;
+$text-20: $text-16 * 1.25;
+$text-18: $text-16 * 1.125;
+$text-14: $text-16 * 0.875;
+$text-12: $text-16 * 0.75;
+$text-10: $text-16 * 0.625;
+
+$line-height-base: 1.375;
+
+// Color system
+$primary: #21202e;
+$secondary: #ebcf90;
+$tertiary: #bab5ac;
+
+$white: #fff;
+$gray: #bdbdbd;
+$gray-dark: #8f8f96;
+$gray-light: #909097;
+$gray-lighter: #fbfbfb;
+$gray-base: #f8f8f7;
+$secondary-dark: #cda05c;
+$blue: #2d9cdb;

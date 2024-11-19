@@ -1,0 +1,25 @@
+.sort {
+  background: transparent;
+  border: none;
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  height: 20px;
+  width: 30px;
+  &::after {
+    font-family: "Font Awesome 5 Pro";
+    content: "\f0de";
+    font-weight: 900;            
+    font-size: $text-20;           
+  }
+  &--dsc {
+    order: 2;
+    &::after {
+      line-height: $line-height-base * 0.3;
+      transform: rotate(180deg);
+      @-moz-document url-prefix() {
+        line-height: $line-height-base * 0.8;
+      } 
+    }
+  }
+}

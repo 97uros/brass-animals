@@ -1,0 +1,97 @@
+.button {
+  min-width: 206px;
+  height: 50px;
+  text-transform: uppercase;
+  font-size: $text-16;
+  font-weight: 700;
+  padding: 0 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 60px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid;
+  transition: 0.2s ease-in;
+  line-height: 1;
+  @include media-breakpoint-down(lg) {
+    height: 40px;
+    min-width: 167px;
+    font-size: $text-14;
+    padding-top: 2px;
+  }
+  &--primary {
+    background-color: $secondary;
+    border-color: $secondary;
+    color: $primary;
+    &:hover {
+      background-color: $secondary-dark;
+      border-color: $secondary-dark;
+      color: $primary;
+    }
+  }
+  &--secondary {
+    background-color: $primary;
+    color: $white;
+    border-color: $primary;
+    &:hover {
+      background-color: transparent;
+      color: $primary;
+    }
+  }
+  &--small {
+    height: 40px;
+    min-width: 167px;
+    font-size: $text-14;
+    padding-top: 2px;
+  }
+}
+
+.btn {
+  min-width: 160px;
+  height: 50px;
+  font-size: $text-16;
+  font-weight: 700;
+  padding: 0 5px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid;
+  transition: 0.2s ease-in;
+  line-height: 1;
+  &--primary {
+    background-color: transparent;
+    border-color: $secondary;
+    color: $secondary;
+    &:hover {
+      background-color: $secondary;
+      border-color: $secondary;
+      color: $primary;
+    }
+  }
+  &:focus {
+    outline: none;
+    box-shadow: none;
+  }
+}
+
+.link {
+  border: none;
+  background-color: transparent;
+  font-weight: 500;
+  color: $secondary-dark;
+  margin-bottom: 10px;
+  text-decoration: none;
+  padding: 0;
+  &:hover {
+    text-decoration: underline;
+  }
+  span {
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+}

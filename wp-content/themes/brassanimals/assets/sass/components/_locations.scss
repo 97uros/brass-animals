@@ -1,0 +1,20 @@
+.locations {
+  background-color: $primary;
+  width: 100%;
+  &__title {
+    text-align: center;
+    color: $secondary;
+    font-size: $text-44;
+    line-height: $line-height-base * 1.27;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+  &__description {
+    color: $white;
+    font-size: $text-18;
+    text-align: center;
+    line-height: $line-height-base * 1.22;
+    margin-top: 70px;
+    margin-bottom: 70px;
+  }
+}

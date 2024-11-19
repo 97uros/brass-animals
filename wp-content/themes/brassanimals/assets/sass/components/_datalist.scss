@@ -1,0 +1,116 @@
+.datalist {
+  position: relative;
+  z-index: 8;
+  width: 100%;
+  max-width: 440px;
+  margin-bottom: 80px;
+  .singlecity & {
+    margin-bottom: 0;
+  }
+  input {
+    padding: 5px 20px;
+    height: 50px;
+    width: 100%;
+    background: $gray-lighter;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.07);
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-size: $text-16;
+    color: $primary;
+    &::-webkit-input-placeholder {
+      color: $tertiary;
+    }
+    &::-moz-placeholder {
+      color: $tertiary;
+    }
+    &:-ms-input-placeholder {
+      color: $tertiary;
+    }
+    &:-moz-placeholder {
+      color: $tertiary;
+    }
+    &:focus {
+      datalist {
+        display: block;
+      }
+    }
+  }
+  select {
+    position: absolute;
+    background-color: $gray-lighter;
+    box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.07);
+    border-radius: 0 0 4px 4px;
+    border: none;
+    max-height: 10rem;
+    overflow-y: auto;
+    padding-top: 5px;
+    height: 50px;
+    width: 100%;
+    max-width: 440px;
+    &.show {
+      display: block;
+    }
+  }
+  option {
+    color: $primary;
+    font-size: $text-18;
+    cursor: pointer;
+    padding: 5px 20px;
+    label {
+      cursor: pointer;
+    }
+    &:hover {
+      background-color: $secondary;
+      font-weight: 700;
+    }
+  }
+  /* Safari 11+ */
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) and (stroke-color: transparent) {
+      option {
+        display: contents;
+        label {
+          display: block;
+          color: $primary;
+          font-size: $text-18;
+          cursor: pointer;
+          padding: 5px 20px;
+          &:hover {
+            background-color: $secondary;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+
+  /* Safari 10.1 */
+  @media not all and (min-resolution: 0.001dpcm) {
+    @supports (-webkit-appearance: none) and (not (stroke-color: transparent)) {
+      option {
+        display: contents !important;
+        label {
+          display: block;
+          color: $primary;
+          font-size: $text-18;
+          cursor: pointer;
+          padding: 5px 20px;
+          &:hover {
+            background-color: $secondary;
+            font-weight: 700;
+          }
+        }
+      }
+    }
+  }
+  i {
+    position: absolute;
+    right: 0;
+    font-size: $text-36;
+    color: $tertiary;
+    top: 10px;
+    right: 19px;
+    pointer-events: none;
+  }
+}
